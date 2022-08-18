@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/*Navegador*/
+.navegador{
+    display: inline;
+    color:orange;
+    font-family: 'Raleway';
+}
+.cajanav{
+    border-bottom: 3px white solid;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    background-image: url(../Imágenes/FondoNaranja2.jpg);
+    z-index: 5;
+}
+li a{
+    color: cornsilk;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+li a:hover{
+    text-shadow: 1px 1px rgb(211, 210, 210);
+    font-style:bold;
+    transform: rotate(150deg);
+}
+
+/*Cuerpo*/
+body{
+    background-image: url(../Imágenes/FondoNaranja2.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    margin: 0px;
+}
+li{
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+}
+p{
+    font-family: "Raleway", sans-serif;
+    color: whitesmoke;
+}
+/*Inicio*/
+.index{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "cajaPrincipal cajaPrincipal cajaPrincipal cajaPrincipal"
+    "separadorWaves separadorWaves separadorWaves separadorWaves"
+    "programas programas programas programas"
+    "calendario calendario calendario calendario"
+    "amigos amigos testimonios testimonios"
+    "contacto contacto contacto contacto"
+    "footer footer footer footer"
+    ;
+}
+
+/*Main*/
+.cajaPrincipal{
+    grid-area: cajaPrincipal;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 40px;
+    top: 53px;
+    border-bottom: 3px solid white
+}
+.logoMain{
+    position: absolute;
+    max-height: 148px;
+    max-width: 148px;
+    top: 205px;
+    left: 20px;
+}
+.videoTitulo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150%;
+    z-index: -1;
+    filter: brightness(80%);
+}
+.cajatitulo{
+    position: absolute;
+    left: 170px;
+    top: 200px;
+}
+h1{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    position: 10px;
+}
+.slogan{
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    margin: 2px;
+}
+/*Separador Waves*/
+.separadorWaves{
+    grid-area: separadorWaves;
+    width: 100%;
+    width: 200px;
+    margin: 0;
+    position: relative;
+    top: -45px;
+    z-index: -1;
+}
+.waves1{
+    transform: scale(1.6326,0.5);
+}
+/*Programas*/
+h3{
+    display: inline-block;
+    color: white;
+    font-family: "Quicksand";
+    font-size: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.programas{
+    grid-area: programas;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    top:-180px;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+.programas li{
+ display: inline-block;
+ border: 3px solid white;
+ border-radius: 5px;
+ height: 320px;
+ width: 250px;
+}
+/*Calendario*/
+.calendario{
+    grid-area: calendario;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: -100px;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*Testimonios*/
+.testimonios{
+    grid-area: testimonios;
+    height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-items: center;  
+    justify-content: center;
+    background: linear-gradient(to right bottom,white,rgb(188, 187, 187));
+    border-top-left-radius: 290px;
+    border-bottom-left-radius: 290px;
+    width: 620px;
+    padding-right: 20px;
+}
+.testimonios h3{
+    color: rgb(224, 147, 3);
+}
+.vidTestimonios{
+    transform: scale(0.8,0.8);
+}
+/*Amigos*/
+.amigos{
+    grid-area: amigos;
+    height: 600px;
+    width: 620px;
+    display: flex;
+    flex-flow: row-reverse wrap; 
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to left bottom,white,rgb(188, 187, 187));
+    border-top-right-radius: 290px;
+    border-bottom-right-radius: 290px;
+    padding-right: 20px;
+}
+.amigos h3{
+    color: rgb(224, 147, 3);
+}
+.partners{
+    position: relative;
+    height: 50%;
+    filter: blur(10px);
+    
+}
+/*Contacto*/
+.contacto{
+    grid-area: contacto;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.conectate{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.qr{ 
+    width: 200px;
+    transition: all 1s;
+}
+.qr:hover{
+    width: 230px;
+}
+.contacto li a{
+    text-decoration: none;
+    
+}
+.datoscontacto{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: "Raleway";
+}   
+.datosform{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.redes{
+    position: relative;
+    height: 300px;
+    width: 100px; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content:center;
+    color: whitesmoke;
+    text-align: center;
+}
+.redes a{
+    text-decoration: none;
+    font-family: "Raleway";
+    color: white;
+}
+.fb{
+    height: 100px;
+}
+.ig{
+    height: 100px;
+}
+
+
+
+/*PÁGINA CALENDARIO*/
+
+.calendarioGrids{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "calendarioA calendarioA calendarioA calendarioA"
+    "calendarioB calendarioB calendarioC calendarioC"
+    "calendarioD calendarioD calendarioC calendarioC"
+    "contacto contacto contacto contacto"
+    "footer footer footer footer"
+    
+    ;
+    gap: 10px;
+}
+header{
+    grid-area: header;
+    border-bottom: 3px white solid;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    background-image: url(../Imágenes/FondoNaranja2.jpg);
+    z-index: 5;}
+.calendarioA{
+grid-area: calendarioA;
+display: flex;
+flex-flow: column wrap;
+padding-top: 60px;
+padding-left: 30px;
+}
+.calendarioA h2{
+ margin-top: -10px;
+}
+.calendarioB{
+grid-area: calendarioB;
+ display: flex;
+ flex-flow: row wrap;
+border:ridge white 3px;
+padding: 15px;
+margin-left: 20px;
+}
+.calendarioC{
+grid-area: calendarioC;
+}
+.calendarioD{
+    grid-area: calendarioD;
+    display: flex;
+    flex-flow: row wrap;
+   border:ridge white 3px;
+   padding: 15px;
+   margin-left: 20px;
+   }
+   .contacto{
+    grid-area: contacto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+   }
+@media(max-width:767px){
+.calendarioGrids{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "calendarioA calendarioA"
+    "calendarioB calendarioB"
+    "calendarioD calendarioD"
+    "calendarioC calendarioC"
+    "contacto contacto"
+    "footer footer"
+    ;
+    gap: 10px;}
+    .contacto{
+        grid-area: contacto;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    .conectate{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .qr{ 
+       display: none;
+    }
+    .contacto li a{
+        text-decoration: none;
+        
+    }
+    .datoscontacto{
+        height: 100%;
+        width: 200px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        color: whitesmoke;
+        font-family: "Raleway";
+    }   
+    .datosform{
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .redes{
+        height: 300px;
+        width: 100px; 
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content:center;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .redes a{
+        text-decoration: none;
+        font-family: "Raleway";
+        color: white;
+    }
+    .fb{
+        height: 100px;
+    }
+    .ig{
+        height: 100px;
+    }
+
+}
+
+
+/*PÁGINA NOSOTROS*/
+
+.quienessomos{
+    display: flex;
+    padding-top: 70px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 31, 31);
+}
+.mision{    
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center; 
+    border-bottom: 3px solid white;
+    background-color: rgb(31, 31, 31);
+}
+
+
+.finallogo{
+    height: 100px;
+    width: 100px;
+}
+
+/*PÁGINA PLATAFORMA*/
+
+.estatua{
+width: 400px}
+
+.plataformaGrids{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "plataformaA plataformaA plataformaA plataformaA"
+    "plataformaB plataformaC plataformaC plataformaC"
+    "footer footer footer footer";
+}
+header{
+    grid-area: header;
+    border-bottom: 3px white solid;
+    text-align: center;
+    width: 99.5%;
+    position: fixed;
+    background-image: url(../Imágenes/FondoNaranja2.jpg);
+    z-index: 5;
+}
+.plataformaA{
+    grid-area: plataformaA;
+    padding-top: 60px;
+    text-align: center;
+
+}
+.plataformaB{
+    grid-area: plataformaB;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.plataformaC{
+    background-color: goldenrod;
+    grid-area: plataformaC;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 3px white groove;
+    box-shadow: 10px 12px 25px;
+}
+.gridejercicio{
+    border: 3px solid white;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 20px;
+}
+h2{
+    font-family: "Raleway";
+    color: whitesmoke;
+}
+h3{
+    font-size: 150%;
+    font-family: "Raleway";
+    color: whitesmoke;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    background-color: rgb(31, 31, 31);
+    padding: 20px;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 5px;
+    text-align: center;
+    flex-flow: column wrap;
+    align-items: center;
+    border-top: 3px solid white;
+}
+
+@media(max-width:768px){
+    .plataformaGrids{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "plataformaA plataformaA"
+        "plataformaB plataformaB"
+        "plataformaC plataformaC"
+        "footer footer"
+        ;
+        gap: 10px;
+    }
+    .estatua{
+        width: 300px
+        }
+        .plataformaB{
+            grid-area: plataformaB;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;}
+}
